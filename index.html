@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- If multi-language site, reconsider usage of html lang declaration here. -->
-<html lang="en"> 
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -9,7 +9,7 @@
   <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
   <link rel="shortcut icon" href="favicon.ico" />
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
+  <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
 
 <body>
@@ -17,23 +17,30 @@
   <div class="container">
     <!--header section start-->
     <header>
-      
+      <h1>User Posts</h1>
     </header>
     <!--header section start-->
     <!--main section start-->
     <main>
-
+      <form action="#FIXME">
+        <input type="text" placeholder="Enter the Page Number">
+        <input type="button" value="submit">
+      </form>
+      <ul class="posts">
+        <li class="post">
+          <div class="user-details">
+            <span class="userid"></span>
+            <p class="title"></p>
+            <p class="post-body"></p>
+          </div>
+          <div class="user-photos"></div>
+        </li>
+      </ul>
     </main>
     <!--main section end-->
-
-    <!--footer section start-->
-    <footer>      
-
-    </footer>
-    <!--footer section end-->
-
   </div>
   <!--container end-->
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>
