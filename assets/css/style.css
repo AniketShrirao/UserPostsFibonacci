@@ -126,35 +126,57 @@ header{
   main styling starts here
 =================================*/
 
+form {
+  margin: 30px;
+}
 
+input[type="text"] {
+  width: 50%;
+  padding: 9.5px 16px;
+}
 
+input[type="button"] {
+ padding: 9.5px 42px;
+ border: 1px solid var(--primary-color);
+ border-radius: 4px;
+ background: brown;
+ color: #fff;
+ font-size: 16px;
+ font-weight: 600;
+ text-align: center;
+ text-transform: capitalize;
+}
 
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(0,0,0,0.5);
+}
 
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 45%;
+  margin: 10px;
+  background: beige;
+}
 
+.userid,
+.title,
+.postBody {
+  padding: 10px;
+  display: inline-block;
+  font-size: 16px;
+}
 
+.user-details { padding: 10px; }
+.user-photos { display: flex; }
 
+figure {
+  margin: 10px;
+  width: 30%;
+}
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
