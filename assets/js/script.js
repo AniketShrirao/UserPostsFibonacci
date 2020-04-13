@@ -51,12 +51,11 @@ const errors = (message) => { console.log(message); }
 
 function displayUI(data) {
 	let fibonacciArray = fibonacciSeries(pageNo);
-	let fibonacciNthTerm = fibonacciArray.pop();
+	let fibonacciNthTerm = fibonacciArray[fibonacciArray.length-1];
 	let reverseData = [...data].reverse();
 	console.log(reverseData);
 	for (let i = 0; i < 10; i++) {
-		let id = postsData[i].userId;
-		console.log(id);
+		let id = postsData[i].id;
 		for (let j = 0; j < fibonacciNthTerm; j++) {
 			let posts = document.querySelector('.posts');
 			let post = createElement('li','post',posts, '');
@@ -69,12 +68,12 @@ function displayUI(data) {
 			if (id % 2 === 0) {
 				for (let k = 0; k < 3; k++) {
 					let figureElement = createElement('figure', '', userPhotos, '');
-					let imgElement = createElement('img',reverseData[k].title,figureElement, reverseData[k].url);
+					createElement('img',reverseData[k].title,figureElement, reverseData[k].url);
 				}
 			} else {
 				for (let k = 0; k < 2; k++) {
 					let figureElement = createElement('figure', '', userPhotos, '');
-					let imgElement = createElement('img',reverseData[k].title, figureElement, reverseData[k].url);
+					createElement('img',reverseData[k].title, figureElement, reverseData[k].url);
 				}
 			}
 		}
@@ -82,10 +81,10 @@ function displayUI(data) {
 }
 
 var fibonacciSeries = (pageNo) => {
-	if (pageNo === 1) {
+	if (parseInt(pageNo) === 1) {
 		return [0, 1];
 	} else {
-		var s = fibonacciSeries(pageNo - 1);
+		var s = fibonacciSeries(parseInt(pageNo) - 1);
 		s.push(s[s.length - 1] + s[s.length - 2]);
 		return s;
 	}
